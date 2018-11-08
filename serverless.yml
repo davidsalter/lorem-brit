@@ -1,0 +1,14 @@
+service: lorem-brit
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: eu-west-2
+
+functions:
+  lorem:
+    handler: handler.lorem
+    events:
+      - http:
+          path: lorem
+          method: get
